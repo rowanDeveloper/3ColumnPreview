@@ -1,0 +1,112 @@
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom properties */
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+
+    /* Background, headings, buttons */
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    /* Typography */
+   --font-size: 15px;
+   --body-font-family: 'Lexend Deca', sans-serif;
+   --font-light-weight: 400;   
+
+    --font-family: 'Big Shoulders Display', cursive;
+    --font-weights: 700;
+}
+
+body {    
+    font-size: 15px;
+    background-color: var(--very-light-gray);
+    color: var(--paragraph-color);
+    font-family: var(--body-font-family);
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    margin: 2rem;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.card {
+    padding: 2.8rem;
+    position: relative;
+}
+
+.sedans {
+    background-color: var(--bright-orange);  
+}
+
+.suvs {
+    background-color: var(--dark-cyan);
+}
+
+.luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.heading {
+    font-family: var(--font-family);
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    margin-top:3rem;
+    margin-bottom: 2rem;
+}
+
+.text {
+    line-height: 1.5rem;
+}
+/* Button */
+
+.link {
+    font-family: var(--body-font-family);
+    background-color: var(--very-light-gray);
+
+    margin-top: 5rem;
+    padding: 1rem 2rem; 
+
+    border: hsl(0, 0%, 95%);
+    border-radius: 5rem;
+}
+
+.sedans .link {
+    color: var(--bright-orange);
+}
+
+.suvs .link {
+    color: var(--dark-cyan);
+}
+
+.luxury .link {
+    color: var(--very-dark-cyan);
+}
+
+link:hover {
+    background-color: transparent;
+}
